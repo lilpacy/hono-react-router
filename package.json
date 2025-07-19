@@ -10,9 +10,9 @@
     "dev": "react-router dev",
     "start": "wrangler dev",
     "typegen": "react-router typegen",
-    "lint": "pnpm /^lint:.*/",
-    "lint:fmt": "prettier --check .",
-    "lint:tsc": "pnpm typegen && tsc --noEmit --project tsconfig.cloudflare.json",
+    "lint": "bun run lint:fmt && bun run lint:tsc && bun run lint:eslint",
+    "lint:fmt": "prettier --write .",
+    "lint:tsc": "bun run typegen && tsc --noEmit --project tsconfig.cloudflare.json",
     "lint:eslint": "eslint .",
     "fmt": "prettier --write .",
     "test": "vitest run -c vitest.config.ts",
@@ -71,7 +71,6 @@
     "wrangler": "^4.0.0"
   },
   "engines": {
-    "node": ">=22.0.0",
-    "pnpm": ">=9"
+    "node": ">=22.0.0"
   }
 }

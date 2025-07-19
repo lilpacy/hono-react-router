@@ -40,26 +40,26 @@ This repository also includes a lighter version under the [`mini`](https://githu
 ### 1. Install dependencies
 
 ```bash
-pnpm install
+bun install
 ```
 
 ### 2. Generate types
 
 ```bash
-pnpm typegen
+bun run typegen
 ```
 
 ### 3. Run initial database migration
 
 ```bash
-pnpm db:generate
-pnpm db:migrate
+bun run db:generate
+bun run db:migrate
 ```
 
 ### 4. Start the development server (with HMR)
 
 ```bash
-pnpm dev
+bun run dev
 ```
 
 Your app will be available at: http://localhost:5173
@@ -67,8 +67,8 @@ Your app will be available at: http://localhost:5173
 ### Optional: Run with Wrangler
 
 ```sh
-pnpm build
-pnpm start
+bun run build
+bun run start
 ```
 
 <br />
@@ -78,7 +78,7 @@ pnpm start
 To create a production-ready build:
 
 ```bash
-pnpm run build
+bun run build
 ```
 
 <br />
@@ -90,19 +90,19 @@ Deployment is handled via [Wrangler](https://developers.cloudflare.com/workers/w
 ### Deploy to production:
 
 ```sh
-npx wrangler deploy
+bunx wrangler deploy
 ```
 
 ### Deploy a preview version:
 
 ```sh
-npx wrangler versions upload
+bunx wrangler versions upload
 ```
 
 Once validated, you can promote a version to production:
 
 ```sh
-npx wrangler versions deploy
+bunx wrangler versions deploy
 ```
 
 <br />
