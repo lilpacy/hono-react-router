@@ -7,9 +7,14 @@ assets = { directory = "./build/client/" }
 
 [[d1_databases]]
 binding = "DB"
-database_name = "<your-database-name>"
-database_id = "<your-database-id>"
+database_name = "hono-react-router-db"
+database_id = "67167978-02ea-430f-9a90-0d5a59c95e55"
 migrations_dir = "database/drizzle"
 
 [observability.logs]
 enabled = true
+
+[vars]
+# Although the following values are identical. VITE_CLERK_PUBLISHABLE_KEY for Frontend and CLERK_PUBLISHABLE_KEY for Backend.
+VITE_CLERK_PUBLISHABLE_KEY = "pk_test_Z2VuZXJvdXMtbWFncGllLTk0LmNsZXJrLmFjY291bnRzLmRldiQ"
+CLERK_PUBLISHABLE_KEY = "pk_test_Z2VuZXJvdXMtbWFncGllLTk0LmNsZXJrLmFjY291bnRzLmRldiQ"
